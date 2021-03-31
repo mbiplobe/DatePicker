@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xic-bx-Idp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="sDT-nW-LeS">
+            <objects>
+                <viewController id="xic-bx-Idp" customClass="ViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rWg-ud-AAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bangladesh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6j-pi-5cv">
+                                <rect key="frame" x="162" y="437.5" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fJ-76-wjn">
+                                <rect key="frame" x="20" y="483.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txtDate:" destination="xic-bx-Idp" eventType="editingDidEnd" id="XIo-VK-5ma"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOL-ke-gyH">
+                                <rect key="frame" x="183" y="544" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="xic-bx-Idp" eventType="touchUpInside" id="Olg-6M-fyL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Bangladesh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWh-Fo-ipz">
+                                <rect key="frame" x="8" y="84" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NK9-Fy-9M7" firstAttribute="trailing" secondItem="8fJ-76-wjn" secondAttribute="trailing" constant="20" id="9My-aH-mXe"/>
+                            <constraint firstItem="kWh-Fo-ipz" firstAttribute="leading" secondItem="NK9-Fy-9M7" secondAttribute="leading" constant="8" id="eHY-dd-o8o"/>
+                            <constraint firstItem="kWh-Fo-ipz" firstAttribute="top" secondItem="NK9-Fy-9M7" secondAttribute="top" constant="40" id="ekq-DH-BTs"/>
+                            <constraint firstItem="8fJ-76-wjn" firstAttribute="leading" secondItem="NK9-Fy-9M7" secondAttribute="leading" constant="20" id="gun-5m-lZx"/>
+                            <constraint firstItem="G6j-pi-5cv" firstAttribute="centerX" secondItem="rWg-ud-AAZ" secondAttribute="centerX" id="lD7-Kj-JZM"/>
+                            <constraint firstItem="NK9-Fy-9M7" firstAttribute="trailing" secondItem="kWh-Fo-ipz" secondAttribute="trailing" constant="8" id="nkD-Kf-XkN"/>
+                            <constraint firstItem="8fJ-76-wjn" firstAttribute="top" secondItem="G6j-pi-5cv" secondAttribute="bottom" constant="25" id="wIG-D7-rqk"/>
+                            <constraint firstItem="G6j-pi-5cv" firstAttribute="centerY" secondItem="rWg-ud-AAZ" secondAttribute="centerY" id="yCB-pA-JbL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NK9-Fy-9M7"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateText" destination="8fJ-76-wjn" id="Hna-Vi-y7A"/>
+                        <segue destination="g0W-KU-Y2u" kind="presentation" identifier="date_segue" id="UHP-75-gNn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSM-BT-pNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="116.51785714285714"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="utW-Zm-Ami">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="g0W-KU-Y2u" customClass="DatePickerViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUM-Gd-I1z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEH-8Q-vBB">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlO-bQ-4vY">
+                                        <rect key="frame" x="8" y="8" width="284" height="20.5"/>
+                                        <color key="backgroundColor" red="0.19543364639999999" green="0.44161218400000002" blue="0.70591443779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8g8-wc-Qfk">
+                                        <rect key="frame" x="8" y="37" width="284" height="216"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1u-De-g8d">
+                                        <rect key="frame" x="8" y="262" width="284" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gE8-Im-Fki"/>
+                                        </constraints>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="onSave:" destination="g0W-KU-Y2u" eventType="touchUpInside" id="mff-aB-XXC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NlO-bQ-4vY" firstAttribute="top" secondItem="aEH-8Q-vBB" secondAttribute="top" constant="8" id="4mj-tT-k6Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="8g8-wc-Qfk" secondAttribute="trailing" constant="8" id="Qtz-1I-Kka"/>
+                                    <constraint firstItem="8g8-wc-Qfk" firstAttribute="top" secondItem="NlO-bQ-4vY" secondAttribute="bottom" constant="8" id="Qyp-cu-Lnv"/>
+                                    <constraint firstItem="8g8-wc-Qfk" firstAttribute="leading" secondItem="aEH-8Q-vBB" secondAttribute="leading" constant="8" id="ag9-0U-2zJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="M1u-De-g8d" secondAttribute="bottom" constant="8" id="dQO-Jp-nq5"/>
+                                    <constraint firstAttribute="width" constant="300" id="fjv-UU-SyL"/>
+                                    <constraint firstAttribute="trailing" secondItem="M1u-De-g8d" secondAttribute="trailing" constant="8" id="is7-XB-T2q"/>
+                                    <constraint firstAttribute="height" constant="300" id="p4V-ln-scd"/>
+                                    <constraint firstItem="M1u-De-g8d" firstAttribute="leading" secondItem="aEH-8Q-vBB" secondAttribute="leading" constant="8" id="ptb-Ra-Wmj"/>
+                                    <constraint firstAttribute="trailing" secondItem="NlO-bQ-4vY" secondAttribute="trailing" constant="8" id="rBw-2K-HaA"/>
+                                    <constraint firstAttribute="bottom" secondItem="M1u-De-g8d" secondAttribute="bottom" constant="8" id="tQF-O6-gXt"/>
+                                    <constraint firstItem="NlO-bQ-4vY" firstAttribute="leading" secondItem="aEH-8Q-vBB" secondAttribute="leading" constant="8" id="tnC-Mk-C6B"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aEH-8Q-vBB" firstAttribute="centerY" secondItem="aUM-Gd-I1z" secondAttribute="centerY" id="EQp-tk-gIY"/>
+                            <constraint firstItem="aEH-8Q-vBB" firstAttribute="centerX" secondItem="aUM-Gd-I1z" secondAttribute="centerX" id="Q32-Vc-I89"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZRR-7R-fbW"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="8g8-wc-Qfk" id="N9W-He-V9b"/>
+                        <outlet property="lblTitle" destination="NlO-bQ-4vY" id="11L-7r-QZr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVu-XV-UP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963.76811594202911" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>
